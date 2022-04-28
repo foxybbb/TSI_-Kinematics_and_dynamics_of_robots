@@ -1,0 +1,9 @@
+function [RRx]=RotBaseX(mobMatrix,angle)
+
+
+RRx=[1 0 0 1;...
+       0 cosd(t) -sind(t) 1;...
+       0 sind(t) cosd(t) 1;...
+       0 0 0 1];
+
+end
