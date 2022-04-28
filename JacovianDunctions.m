@@ -175,9 +175,38 @@ t6p=t6+t6+dT;
     J(12,5)=f12(t1,t2,t3,t4,t5p,t6,dM)-f12(t1,t2,t3,t4,t5,t6,dM)/dT;
     J(12,6)=f12(t1,t2,t3,t4,t5,t6p,dM)-f12(t1,t2,t3,t4,t5,t6,dM)/dT;
     
+    f(1)=f1(t1,t2,t3,t4,t5,t6,dM);
+    f(2)=f2(t1,t2,t3,t4,t5,t6,dM);
+    f(3)=f3(t1,t2,t3,t4,t5,t6,dM);
+    f(4)=f4(t1,t2,t3,t4,t5,t6,dM);
+    f(5)=f5(t1,t2,t3,t4,t5,t6,dM);
+    f(6)=f6(t1,t2,t3,t4,t5,t6,dM);
+    f(7)=f7(t1,t2,t3,t4,t5,t6,dM);
+    f(8)=f8(t1,t2,t3,t4,t5,t6,dM);
+    f(9)=f9(t1,t2,t3,t4,t5,t6,dM);
+    f(10)=f10(t1,t2,t3,t4,t5,t6,dM);
+    f(11)=f11(t1,t2,t3,t4,t5,t6,dM);
+    f(12)=f12(t1,t2,t3,t4,t5,t6,dM);
     
+    ds=pinv(J)*(-f');
+    
+    t1=t1+d1(1);
+    t2=t2+d2(2);
+    t3=t3+d3(3);
+    t4=t4+d4(4);
+    t5=t5+d5(5);
+    t6=t6+d6(6);
+
+    
+    if(abs(f(1))<1.0e-9 && abs(f(2))<1.0e-9 &&abs(f(3))<1.0e-9 && abs(f(4))<1.0e-9 && ...
+            abs(f(5))<1.0e-9 && abs(f(6))<1.0e-9 && abs(f(7))<1.0e-9 && abs(f(8))<1.0e-9 &&...
+            abs(f(10))<1.0e-9 && abs(f(11))<1.0e-9 && abs(f(12))<1.0e-9)
+     
+        break;
+     
+    end
     
 end
 
-
+T06=UR5(t1,t2,t3,t4,t5,t6);
 end
