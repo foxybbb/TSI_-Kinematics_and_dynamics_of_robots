@@ -1,0 +1,18 @@
+function []=MoveJTest(p1,p2,nvp)
+
+deltap = p1 - p2;
+
+dev =  deltap/nvp;
+
+RDK=Robolink;
+robot=RDK.Item("UR5");
+for
+robot.MoveJ(dev)
+
+
+end
+
+
+
+
+
