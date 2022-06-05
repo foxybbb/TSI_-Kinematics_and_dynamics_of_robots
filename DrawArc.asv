@@ -1,0 +1,13 @@
+function []=XYARCRadius(Matrix,arcRadius,quadrant)
+for n=1:arcRadius
+   
+   dY=-arcRadius*sind(n);
+   dX=-(arcRadius-arcRadius*cosd(n));
+    
+    Mat(1,4)=Mat(1,4)+dX;
+    Mat(2,4)=Mat(2,4)+dY;
+    robot.setPose(Mat)
+    
+end
+
+end
