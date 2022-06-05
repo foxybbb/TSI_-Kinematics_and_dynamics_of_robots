@@ -63,7 +63,6 @@ robot=RDK.Item('Adept');
 
 global a;
 
-a = arduino('COM4','Uno')
 t1 = 0;
 t2 = 0;
 d1 = 0;
