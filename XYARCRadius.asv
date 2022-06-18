@@ -1,11 +1,11 @@
-function [th,Mat]=XYARCRadius(robot,Mat,arcRadius,angle,quadrant)
- th = [];
+function [Mat]=XYARCRadius(robot,Mat,arcRadius,angle,quadrant)
+ 
  px = Mat(1,4);
  py = Mat(2,4);  
- thetas = robot.Joints();
+ thetas = p1
  if angle < 0 
      for n=-0:-1:angle
-    
+    n
    dx =-(arcRadius-arcRadius*cosd(n));
    dy=-arcRadius*sind(n);
   
@@ -35,7 +35,7 @@ function [th,Mat]=XYARCRadius(robot,Mat,arcRadius,angle,quadrant)
  else
 
    for n=0:1:angle
-  
+  n
    dx =-(arcRadius-arcRadius*cosd(n));
    dy=-arcRadius*sind(n);
   
@@ -58,9 +58,8 @@ function [th,Mat]=XYARCRadius(robot,Mat,arcRadius,angle,quadrant)
    
     Mat=Mat*RotaZ(1);
     
-   % thetas = Newton(Mat,thetas);
-     thetas = robot.SolveIK(Mat)
-    th = [th;thetas];
+    thetas = Newton(Mat,thetas);
+    robot.setJoints(thetas);
     
    end   
  end

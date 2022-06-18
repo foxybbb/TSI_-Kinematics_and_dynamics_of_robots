@@ -5,7 +5,7 @@ t3=iniGuess(3);
 t4=iniGuess(4);
 t5=iniGuess(5);
 t6=iniGuess(6);
-dT=0.001;
+dT=0.01;
 
 for n=1:100000
 t1p=t1+t1+dT;

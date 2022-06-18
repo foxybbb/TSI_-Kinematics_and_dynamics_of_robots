@@ -19,10 +19,9 @@ robot.setJoints(p1)
 robot.MoveJ(Mat)
 
 %0.000000, -119.900000, -122.000000, -27.390000, 90.000000, 0.000000
-[th1 Mat] = XYARCRadius(robot,Mat,50,90,1)
+[th Mat] = XYARCRadius(robot,Mat,50,90,1)
 
-[th2 Mat] = translation_UR5_Joints_vector(100,'X');
-th = th1+ th2
+[th Mat] = [th Mat]+translation_UR5_Joints_vector(100,'X')
 for n=1:size(th)
     robot.setJoints(th(n,:));
     pause(0.001)
