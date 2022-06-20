@@ -58,8 +58,8 @@ function [th,Mat]=XYARCRadius(robot,Mat,arcRadius,angle,quadrant)
    
     Mat=Mat*RotaZ(1);
     
-   % thetas = Newton(Mat,thetas);
-     thetas = robot.SolveIK(Mat)
+    %thetas = Newton(Mat,thetas)
+      thetas = robot.SolveIK(Mat);
     th = [th;thetas];
     
    end   
